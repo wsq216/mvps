@@ -8,6 +8,7 @@ import com.example.mvps.data.tongpaohome.BannerBean;
 import com.example.mvps.data.tongpaohome.Hot_userBase;
 import com.example.mvps.data.tongpaohome.PersonalBean;
 import com.example.mvps.data.tongpaohome.RecommendBean;
+import com.example.mvps.data.tongpaohome.TPVideoBean;
 import com.example.mvps.data.tongpaohome.TopicBean;
 import com.example.mvps.interfaces.tongpao.TongPoa;
 import com.example.mvps.presenter.RecommendPreserenter;
@@ -78,5 +79,10 @@ public class PersonalDataFragment extends BaseFragment<RecommendPreserenter> imp
         }else{
             return;
         }
+    }
+
+    @Override
+    public void getVideoReturn(TPVideoBean result) {
+
     }
 }

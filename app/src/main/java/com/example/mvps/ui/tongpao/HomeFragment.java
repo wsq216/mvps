@@ -41,7 +41,7 @@ public class HomeFragment extends BaseFragment {
 
 
         fragments.add(new RecommendFragment());
-
+        fragments.add(new VideoFragment());
 
 
         pager.setAdapter(new FragmentPagerAdapter(getChildFragmentManager()) {

@@ -25,7 +25,7 @@ import com.example.mvps.expandableTextView.ExpandableTextView;
 import com.example.mvps.ui.BigActivity;
 import com.example.mvps.ui.MyActivity;
 import com.example.mvps.utils.DateUtils;
-import com.example.mvps.utils.TxtUtils;
+import com.example.mvps.utils.TxtUtilss;
 import com.jaeger.ninegridimageview.NineGridImageView;
 import com.jaeger.ninegridimageview.NineGridImageViewAdapter;
 
@@ -77,7 +77,7 @@ public class RecommendAdapter extends BaseAdapter {
         String createTime = dataBean.getPostDetail().getCreateTime();
         Long dateToTime = DateUtils.getDateToTime(createTime, null);
         String standardDate = DateUtils.getStandardDate(dateToTime);
-        TxtUtils.setTextView(time,standardDate);
+        TxtUtilss.setTextView(time,standardDate);
 
         String content = postDetail.getContent();
 
@@ -119,7 +119,7 @@ public class RecommendAdapter extends BaseAdapter {
         spannableString.setSpan(clickableSpans,i,indexOf,Spanned.SPAN_INCLUSIVE_INCLUSIVE);
         spannableString.setSpan(clickableSpan,indexOf1,indexOf2,Spanned.SPAN_INCLUSIVE_INCLUSIVE);
         expandableTextView.setMovementMethod(LinkMovementMethod.getInstance());
-        TxtUtils.setTextView(expandableTextView,spannableString);
+        TxtUtilss.setTextView(expandableTextView,spannableString);
 
         imgs = new ArrayList<>();
         List<RecommendBean.DataBean.PostDetailBean.ImagesBean> images = dataBean.getPostDetail().getImages();

@@ -4,6 +4,7 @@ import com.example.mvps.data.tongpaohome.BannerBean;
 import com.example.mvps.data.tongpaohome.Hot_userBase;
 import com.example.mvps.data.tongpaohome.PersonalBean;
 import com.example.mvps.data.tongpaohome.RecommendBean;
+import com.example.mvps.data.tongpaohome.TPVideoBean;
 import com.example.mvps.data.tongpaohome.TopicBean;
 import com.example.mvps.interfaces.BasePersenter;
 import com.example.mvps.interfaces.BeanView;
@@ -19,6 +20,7 @@ public interface TongPoa {
         void getTopic(TopicBean topicBean);
         void getHot_user(Hot_userBase hot_userBase);
         void getPersonal(PersonalBean personalBean);
+        void getVideoReturn(TPVideoBean result);
     }
 
     //home业务下 P层接口
@@ -28,6 +30,7 @@ public interface TongPoa {
         void getTopic();
         void getHot_user();
         void getPersonal();
+        void getVideo();
     }
 
     //home业务下的model
@@ -37,6 +40,7 @@ public interface TongPoa {
         void getTopic(Callback callback);
         void getHot_user(Callback callback);
         void getPersonal(Callback callback);
+        void getVideo(Callback callback);
 
         //获取天气数据 --> p层调用m层的接口
 //        void getWeatcher(Map<String, String> map, Callback callback);

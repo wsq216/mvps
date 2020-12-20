@@ -5,6 +5,7 @@ import com.example.mvps.data.tongpaohome.BannerBean;
 import com.example.mvps.data.tongpaohome.Hot_userBase;
 import com.example.mvps.data.tongpaohome.PersonalBean;
 import com.example.mvps.data.tongpaohome.RecommendBean;
+import com.example.mvps.data.tongpaohome.TPVideoBean;
 import com.example.mvps.data.tongpaohome.TopicBean;
 import com.example.mvps.interfaces.Callback;
 import com.example.mvps.interfaces.tongpao.TongPoa;
@@ -94,6 +95,21 @@ public class RecommendPreserenter extends BasePresenter<TongPoa.View> implements
             @Override
             public void success(Object o) {
                 view.getPersonal((PersonalBean) o);
+            }
+        });
+    }
+
+    @Override
+    public void getVideo() {
+        this.homeModel.getVideo(new Callback() {
+            @Override
+            public void fail(String msg) {
+                view.fila(msg);
+            }
+
+            @Override
+            public void success(Object o) {
+                view.getVideoReturn((TPVideoBean) o);
             }
         });
     }

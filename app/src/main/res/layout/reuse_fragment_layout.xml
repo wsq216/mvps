@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/Rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/RB_hotspot"
+            android:textSize="20dp"
+            android:text="热点"
+            android:checked="true"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:paddingVertical="3dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/cb_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/RB_find"
+            android:textSize="20sp"
+            android:text="发现"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:paddingVertical="3dp"
+            android:paddingHorizontal="15dp"
+            android:background="@drawable/cb_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/mFrame_void"/>
+
+
+</LinearLayout>

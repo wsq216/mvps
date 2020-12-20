@@ -5,6 +5,7 @@ import com.example.mvps.data.tongpaohome.BannerBean;
 import com.example.mvps.data.tongpaohome.Hot_userBase;
 import com.example.mvps.data.tongpaohome.PersonalBean;
 import com.example.mvps.data.tongpaohome.RecommendBean;
+import com.example.mvps.data.tongpaohome.TPVideoBean;
 import com.example.mvps.data.tongpaohome.TopicBean;
 import com.example.mvps.interfaces.Callback;
 import com.example.mvps.interfaces.tongpao.TongPoa;
@@ -82,6 +83,22 @@ public class RecommendModel extends BaseModel implements TongPoa.Model {
                 .subscribeWith(new CommonSubscriber<PersonalBean>(callback) {
                     @Override
                     public void onNext(PersonalBean personalBean) {
+                        if (personalBean!=null) {
+                            callback.success(personalBean);
+                        }
+                    }
+                });
+        addDisposable(disposable);
+    }
+
+    @Override
+    public void getVideo(Callback callback) {
+        Disposable disposable= HttpmManager.getHttpmManager().getRecommend()
+                .getVideoData()
+                .compose(RxUtils.rxScheduler())
+                .subscribeWith(new CommonSubscriber<TPVideoBean>(callback) {
+                    @Override
+                    public void onNext(TPVideoBean personalBean) {
                         if (personalBean!=null) {
                             callback.success(personalBean);
                         }

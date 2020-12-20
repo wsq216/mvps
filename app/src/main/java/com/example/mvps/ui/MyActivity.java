@@ -17,6 +17,7 @@ import com.example.mvps.data.tongpaohome.BannerBean;
 import com.example.mvps.data.tongpaohome.Hot_userBase;
 import com.example.mvps.data.tongpaohome.PersonalBean;
 import com.example.mvps.data.tongpaohome.RecommendBean;
+import com.example.mvps.data.tongpaohome.TPVideoBean;
 import com.example.mvps.data.tongpaohome.TopicBean;
 import com.example.mvps.fragment.PersonalDataFragment;
 import com.example.mvps.interfaces.tongpao.TongPoa;
@@ -130,6 +131,11 @@ public class MyActivity extends BaseActivity<RecommendPreserenter> implements To
             articelnumber.setText(data.getArticelnumber() + "");
             dynamicnumber.setText(data.getDynamicnumber() + "");
         }
+    }
+
+    @Override
+    public void getVideoReturn(TPVideoBean result) {
+
     }
 
     @Override
