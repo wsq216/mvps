@@ -44,6 +44,7 @@
         <activity android:name=".ui.IndexActivity" />
         <activity android:name=".jpush.TestJPushActivity" />
         <activity android:name=".ui.easemob.UserDetailActivity"/>
+        <activity android:name=".ui.tongpao.VideoViewPagerActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

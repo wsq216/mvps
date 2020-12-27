@@ -43,7 +43,7 @@ public class VideoAdapter extends BaseAdapter {
         TextView count = (TextView) vh.getViewById(R.id.video_count);
 
 
-        Glide.with(context).load(bean.getCover()).apply(new RequestOptions().circleCrop()).into(frame);
+        Glide.with(context).load(bean.getCover()).into(frame);
         TxtUtilss.setTextView(title,bean.getContent());
         Glide.with(context).load(bean.getHeadUrl()).apply(new RequestOptions().circleCrop()).into(head);
         TxtUtilss.setTextView(name,bean.getNickName());

@@ -1,8 +1,9 @@
 package com.example.mvps.data.tongpaohome;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class TPVideoBean {
+public class TPVideoBean implements Serializable{
 
     /**
      * status : {"statusCode":100,"message":"请求成功！","serverTime":"2020-08-04 15:52:02"}
@@ -64,7 +65,7 @@ public class TPVideoBean {
         }
     }
 
-    public static class DataBean {
+    public static class DataBean implements Serializable{
         /**
          * countNumber : 11531
          * counts : {}
@@ -102,7 +103,7 @@ public class TPVideoBean {
         public static class CountsBean {
         }
 
-        public static class ListBean {
+        public static class ListBean implements Serializable {
             /**
              * userID : 294151
              * peopleNearby : 0
